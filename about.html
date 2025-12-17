@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>О компании и практика — Люксупак</title>
+  <button onclick="changeColor() ">Изменить тему</button>
+  <script>
+	const colors = ["lavender", "pink"];
+	let idx = 0;
+
+	document.getElementById("btn").addEventListener("click", changeColor);
+
+	function changeColor() {
+	document.body.style.backgroundColor = colors[idx];
+	idx = (idx + 1) % colors.length;
+}
+	</script>
+</head>
+<style>
+	body{
+background: pink;	
+}
+	header{
+background: linear-gradient(Lavender,Pink);	
+}
+	ul{
+list-style: none;
+padding: 30px;
+}
+	li{
+line-height: 1.5;
+font-size: 20px;
+}
+	a{
+color: black;
+font-size: 20px;
+text-decoration: none;	
+}
+	a:hover{
+color: gray;
+text-decoration: none;	
+}
+	div.scroll-container {
+  overflow: auto;
+  white-space: nowrap;
+  padding: 5px;
+  font-size: 5px;
+  img { max-width: 20%; }
+}
+	div.scroll-container img {
+  padding: 5px;
+}
+	.line-with-text::before,
+	.line-with-text::after {
+  content: "";
+  flex: 1;
+  border-bottom: 3px solid black;
+}
+	.line-with-text {
+  display: flex;
+  align-items: center;
+  text-align: center; 
+}
+	.rectangle {
+width: auto;
+height: auto;
+background: linear-gradient(to right, Lavender, Pink);
+}
+	body {
+font-family: times new roman;
+padding: 20px;
+}
+    h1, h2, h3 {
+font-family: verdana;
+}
+	p {
+font-size: 20px;
+line-height: 1.5;
+}
+	header h1 { 
+font-size: 70px;
+font-weight: 600;
+background-image: linear-gradient(10deg, black, white);
+color: transparent;
+background-clip: text;
+-webkit-background-clip: text;	
+}
+    table {
+width: 800px;
+height: 200px; 
+border-collapse: collapse; 
+}
+    th, td {
+border: 2px solid Lavender;
+}
+</style>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo"><img src="logo.png" alt="логотип" width="120" height="120" align="center"/>Люксупак</a></h1>
+      <nav class="main-nav" id="main-nav-2">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="about.html">О компании и практике</a></li>
+          <li><a href="services.html">Продукция</a></li>
+          <li><a href="contact.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article>
+      <h2>О компании</h2>
+      <p>Типография «ЛЮКСУПАК» с более чем 20-летним опытом работы является ведущей компанией на рынке картонной упаковки. Постоянно развиваемся, уделяя большое внимание оказанию широкого спектра полиграфических услуг.</p>
+	
+	  <div class="rectangle">
+        <h3>Миссия и сферы деятельности</h3>
+        <ul>
+          <li>Дизайн и разработка упаковки</li>
+          <li>Производство на собственном оборудовании</li>
+          <li>Послепродажное сопровождение и логистика</li>
+        </ul>
+	  </div>
+      
+
+      <section id="internship">
+	  <h2 class="line-with-text"><span>Практика: что я делала на месте</span></h2>
+	  
+	  <div class="rectangle">
+	    <ul>
+          <li>ФИО:	Рябкова Ксения Николаевна</li>
+          <li>Группа и специальность:	2-09ПС-1,	Информационные системы и программирование</a></li>
+          <li>Место практики:	г. Тверь,	ООО "Люксупак"</li>
+          <li>Руководитель:	Бабахян Артем Андреевич</li>
+        </ul>
+	  </div>
+	  
+	    <div class="rectangle", align="center">
+        <p>Во время практики в компании я работала в качестве помощника системного администратора, мои задачи и навыки приведенные в таблице:</p>
+		</div>
+
+        <table align="center">
+			<colgroup>
+				<col span="3" style="background-color: PaleVioletRed">
+			</colgroup>
+			<tr>
+				<th>Задачи</th><th>Деятельность</th><th>Навыки</th>
+			</tr>
+			<tr>
+				<td>Услуги обслуживания принтеров</td><td>Настройка печати, слежка замятий бумаг, замена картриджей, заправка картриджей</td><td>Работа с принтером, исправление неисправностей принтера</td>
+			</tr>
+			<tr>
+				<td>Техническая поддержка сетевых систем</td><td>Проверка сетевых кабелей, соединений, роутеров</td><td>Введение в сетевые технологии, монтаж структурированных кабелей</td>
+			</tr>
+			<tr>
+				<td>Консультация по техническим вопросам</td><td>Организация рабочих мест, помощь команде</td><td>Общение с персоналом, управление Windows</td>
+			</tr>
+        </table><br><br>
+		
+		<h3>Подведение итогов</h3>
+		<p>Во время стажировки в компании «Люксупак» я получила возможность
+		применить свои теоретические знания на практике. Этот опыт позволил
+		мне глубже понять работу IT-отдела и ознакомиться с реальными проектами. 
+		Я научилась эффективно решать задачи, развила навыки работы в команде и
+		осознала важность коммуникации в профессиональной среде.</p>
+		<br><br>
+
+      <p><a href="contact.html">Связаться ✉</a></p>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><a href="index.html">← На главную</a></p>
+    </div>
+  </footer><br><br>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 «Люксупак»</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+

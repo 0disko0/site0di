@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Продукция — Люксупак</title>
+  <button onclick="changeColor() ">Изменить тему</button>
+  <script>
+const colors = ["lavender", "pink"];
+let idx = 0;
+
+document.getElementById("btn").addEventListener("click", changeColor);
+
+function changeColor() {
+  document.body.style.backgroundColor = colors[idx];
+  idx = (idx + 1) % colors.length;
+}
+</script>
+</head>
+<style>
+	body{
+background: pink;	
+}
+	header{
+background: linear-gradient(Lavender,Pink);	
+}
+	ul{
+list-style: none;
+padding: 30px;
+}
+	a{
+color: black;
+font-size: 20px;
+text-decoration: none;	
+}
+	a:hover{
+color: gray;
+text-decoration: none;	
+}
+	div.scroll-container {
+  overflow: auto;
+  white-space: nowrap;
+  padding: 5px;
+  font-size: 5px;
+  img { max-width: 20%; }
+}
+	div.scroll-container img {
+  padding: 5px;
+}
+	.line-with-text::before,
+	.line-with-text::after {
+  content: "";
+  flex: 1;
+  border-bottom: 3px solid black;
+}
+	.line-with-text {
+  display: flex;
+  align-items: center;
+  text-align: center; 
+}
+	.rectangle {
+width: auto;
+height: auto;
+background: linear-gradient(to right, Lavender, Pink);
+}
+	body {
+font-family: times new roman;
+padding: 20px;
+}
+    h1, h2, h3 {
+font-family: verdana;
+}
+	p {
+font-size: 20px;
+line-height: 1.5;
+}
+	header h1 { 
+font-size: 70px;
+font-weight: 600;
+background-image: linear-gradient(10deg, black, white);
+color: transparent;
+background-clip: text;
+-webkit-background-clip: text;	
+}
+</style>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo"><img src="logo.png" alt="логотип" width="120" height="120" align="center"/>Люксупак</a></h1>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="about.html">О компании и практике</a></li>
+          <li><a href="services.html">Продукция</a></li>
+          <li><a href="contact.html">Контакты</a></li>
+        </ul>
+    </div>
+  </header>
+
+	<h2 class="line-with-text"><span>Продукция и услуги</span></h2>
+   
+    <section id="boxes" class="product-section">
+	<div class="rectangle">
+      <h3>Картонные коробки</h3>
+      <p>Типы: гофрокороб, коробки из микрогофры, полноцветная печать.</p>
+	  <div class="scroll-container">
+        <article class="card">
+          <img src="гофрокороб.png" alt="гофрокороб" />
+		  <img src="микрогофра.png" alt="микрогофра" />
+		  <img src="печать.png" alt="печать" />
+	  </div>
+	  </div>
+		</article>
+    </section><br><br>
+
+    <section id="gift" class="product-section">
+	<div class="rectangle">
+      <h3>Подарочная упаковка</h3>
+      <p>Дизайн, отделка, ленты и декоративные вставки.</p>
+    <div class="scroll-container">
+        <article class="card">
+          <img src="дизайн.png" alt="дизайн" />
+		  <img src="отдел.png" alt="отдел" />
+		  <img src="лента.png" alt="лента" />
+		  <img src="декор.png" alt="декор" />
+	  </div>
+	  </div>
+		</article>
+    </section><br><br>
+
+    <section id="labels" class="product-section">
+	<div class="rectangle">
+      <h3>Этикетки и самоклеящиеся стикеры</h3>
+      <p>Материалы: бумага, пленка, термоусадка.</p>
+	<div class="scroll-container">
+        <article class="card">
+          <img src="бумага.png" alt="бумага" />
+		  <img src="пленка.png" alt="пленка" />
+		  <img src="термоусадка.png" alt="термоусадка" />
+	  </div>
+	  </div>
+		</article>
+    </section><br><br>
+
+      <div class="specs">
+        <article class="spec-card">
+		<div class="rectangle">
+          <h3>Офсетная печать</h3>
+          <p>Высококачественная печать больших тиражей.</p>
+		</div>
+        </article><br><br>
+		
+        <article class="spec-card">
+		<div class="rectangle">
+          <h3>Цифровая печать</h3>
+          <p>Малые тиражи с быстрым сроком изготовления.</p>
+		</div>
+        </article>
+      </div><br><br>
+
+    <nav class="anchor-nav">
+      <a href="#boxes">Картонные коробки</a> |
+      <a href="#gift">Подарочная</a> |
+      <a href="#labels">Этикетки</a>
+    </nav><br><br>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><a href="index.html">← На главную</a></p>
+    </div>
+  </footer><br><br>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 «Люксупак»</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
+

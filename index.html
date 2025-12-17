@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Люксупак — Главная</title>
+  <button onclick="changeColor() ">Изменить тему</button>
+	<script>
+const colors = ["lavender", "pink"];
+let idx = 0;
+
+document.getElementById("btn").addEventListener("click", changeColor);
+
+function changeColor() {
+  document.body.style.backgroundColor = colors[idx];
+  idx = (idx + 1) % colors.length;
+}
+</script>
+</head>
+	<style>
+	body{
+background: pink;	
+}
+	header{
+background: linear-gradient(Lavender,Pink);	
+}
+	ul{
+list-style: none;
+padding: 20px;
+}
+	a{
+color: black;
+font-size: 30px;
+text-decoration: none;	
+}
+	a:hover{
+color: gray;
+text-decoration: none;	
+}
+	div.scroll-container {
+  background-color: lightpink;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 5px;
+  font-size: 5px;
+  img { max-width: 25%; }
+}
+	div.scroll-container img {
+  padding: 5px;
+}
+	.line-with-text::before,
+	.line-with-text::after {
+  content: "";
+  flex: 1;
+  border-bottom: 3px solid black;
+}
+	.line-with-text {
+  display: flex;
+  align-items: center;
+  text-align: center; 
+}
+	.rectangle {
+width: auto;
+height: auto;
+background: linear-gradient(to right, Lavender, Pink);
+}
+	body {
+font-family: times new roman;
+padding: 20px;
+}
+    h1, h2, h3 {
+font-family: verdana;
+}
+	p {
+font-size: 20px;
+line-height: 1.5;
+}
+	header h1 { 
+font-size: 70px;
+font-weight: 600;
+background-image: linear-gradient(10deg, black, white);
+color: transparent;
+background-clip: text;
+-webkit-background-clip: text;	
+}
+	</style>
+<body>
+  <header class="site-header", align="center">
+    <div class="container header-inner">
+      <h1 class="logo"><img src="logo.png" alt="логотип" width="120" height="120" align="center"/>Люксупак</a></h1>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="about.html">О компании и практике</a></li>
+          <li><a href="services.html">Продукция</a></li>
+          <li><a href="contact.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+    <section class="hero">
+      <div class="container">
+        <h2>Упаковочные решения и производство коробок</h2>
+        <p>«Люксупак» — производитель упаковки премиум-класса: коробки, этикетки, подарочные наборы и логистика. Практика студентов позволяет узнать процессы производства и менеджмента изнутри.</p>
+        <p><a class="btn" href="about.html#internship">Подробнее о практике →</a></p>
+      </div>
+    </section>
+
+    <section class="features container">
+      <article>
+        <h2>Наши преимущества</h2>
+          <p>Качество и сертификация</p>
+          <p>Индивидуальные разработки дизайна</p>
+          <p>Своё производство и быстрые сроки</p>
+      </article>
+    </section>
+    <section class="cards container" aria-label="Примеры продукции">
+      <h2 class="line-with-text"><span>Примеры продукции</span></h2>
+	  <br><br>
+          <div class="rectangle", align="center">
+		  <h2>Картонные коробки</h2>
+          <p>Стандартные и индивидуальные размеры для розницы и e-commerce.</p>
+		  </div>
+			<div class="scroll-container">
+        <article class="card">
+          <img src="коробка1.jpg" alt="Картонная коробка" />
+		  <img src="коробка2.jpg" alt="Картонная коробка" />
+		  <img src="коробка3.jpg" alt="Картонная коробка" />
+		  <img src="коробка4.jpg" alt="Картонная коробка" />
+		  <img src="коробка5.jpg" alt="Картонная коробка" />
+		  <img src="коробка6.jpg" alt="Картонная коробка" />
+			</div>
+          <p><a href="services.html#boxes">Подробнее →</a></p>
+        </article><br><br>
+		
+		
+		  <div class="rectangle", align="center">
+          <h2>Подарочная упаковка</h2>
+          <p>Дизайн и финишная обработка — тиснение, ламинация, УФ-лак.</p>
+		  </div>
+		  <div class="scroll-container">
+        <article class="card">
+          <img src="1.gif" alt="Подарочная упаковка" />
+		  <img src="2.gif" alt="Подарочная упаковка" />
+		  <img src="3.gif" alt="Подарочная упаковка" />
+		  <img src="4.gif" alt="Подарочная упаковка" />
+		  <img src="5.gif" alt="Подарочная упаковка" />
+			</div>
+          <p><a href="services.html#gift">Подробнее →</a></p>
+        </article><br><br>
+
+    </section><br><br>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 «Люксупак»</p>
+    </div>
+  </footer>
+
+</body>
+</html>

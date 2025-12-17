@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Контакты — Люксупак</title>
+  <button onclick="changeColor() ">Изменить тему</button>
+	<script>
+const colors = ["lavender", "pink"];
+let idx = 0;
+
+document.getElementById("btn").addEventListener("click", changeColor);
+
+function changeColor() {
+  document.body.style.backgroundColor = colors[idx];
+  idx = (idx + 1) % colors.length;
+}
+</script>
+</head>
+<style>
+	body{
+background: pink;	
+}
+	header{
+background: linear-gradient(Lavender,Pink);	
+}
+	ul{
+list-style: none;
+padding: 30px;
+}
+	a{
+color: black;
+font-size: 20px;
+text-decoration: none;	
+}
+	a:hover{
+color: gray;
+text-decoration: none;	
+}
+	.line-with-text::before,
+	.line-with-text::after {
+  content: "";
+  flex: 1;
+  border-bottom: 3px solid black;
+}
+	.line-with-text {
+  display: flex;
+  align-items: center;
+  text-align: center; 
+}
+	.rectangle {
+width: auto;
+height: auto;
+background: linear-gradient(to right, Lavender, Pink);
+}
+	body {
+font-family: times new roman;
+padding: 20px;
+}
+    h1, h2, h3 {
+font-family: verdana;
+}
+	p {
+font-size: 20px;
+line-height: 1.5;
+}
+	header h1 { 
+font-size: 70px;
+font-weight: 600;
+background-image: linear-gradient(10deg, black, white);
+color: transparent;
+background-clip: text;
+-webkit-background-clip: text;	
+}
+	</style>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo"><img src="logo.png" alt="логотип" width="120" height="120" align="center"/>Люксупак</a></h1>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="about.html">О компании и практике</a></li>
+          <li><a href="services.html">Продукция</a></li>
+          <li><a href="contact.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+	<img src="люксупак.png" alt="картинка" width="600" height="488" align="right"/>
+	
+	<h2 class="line-with-text"><span>Свяжитесь с нами</span></h2>
+    <div class="rectangle">
+
+    <section class="contact-info">
+      <p>Адрес: г. Тверь, пр-т Николая Корыткова, дом 15 "Б"</p>
+      <p>Телефон: <a href="tel:+7 (4822) 35-04-35">+7 (4822) 35-04-35</a></p>
+      <p>Email: <a href="leonovprint@lux-upak.ru">leonovprint@lux-upak.ru</a></p>
+    </section>
+	
+    <section class="contact-form">
+      <form id="contactForm" action="#" method="post" novalidate>
+        <label>
+          <p>Ваше имя
+          <input type="text" name="name" required minlength="2" />
+		  </p>
+        </label>
+
+        <label>
+          <p>Email
+          <input type="email" name="email" required />
+		  </p>
+        </label>
+
+        <label>
+          <p>Телефон
+          <input type="tel" name="phone" pattern="+" />
+		  </p>
+        </label>
+
+        <label>
+          <p>Сообщение
+          <textarea name="message" rows="5" required></textarea>
+		  </p>
+        </label>
+
+        <button type="submit" class="btn">Отправить</button>
+      </form>
+      <div id="formResult"></div>
+	  </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><a href="index.html">← На главную</a></p>
+    </div>
+  </footer><br><br>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 «Люксупак»</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
+
+
